@@ -39,4 +39,14 @@ class PostController extends Controller
 
     }
 
+    public function update(Request $request, $id){
+        $request -> validate([
+            'title' => 'required|max:255',
+            'news_content' => 'required',
+        ]);
+
+        return response()->json('sudah dapat digunakan');
+
+    }
+
 }
